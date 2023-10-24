@@ -1,4 +1,5 @@
 import { AiOutlineSearch } from "react-icons/ai";
+import InputField from "../Atoms/InputField";
 
 interface InputProps {
   handleSearch: (e: React.KeyboardEvent<HTMLInputElement>) => void;
@@ -8,9 +9,8 @@ interface InputProps {
 const Input = ({ handleSearch, setLocation }: InputProps) => {
   return (
     <form className="flex items-center md:w-2/4 w-full order-2 md:order-1">
-      <input
-        type="text"
-        placeholder="都市を検索"
+      <InputField
+        placeholder="都市を検索(英語で)"
         className="w-full bg-transparent border-b-2 placeholder-white outline-none text-white"
         onKeyDown={handleSearch}
         onChange={(e) => setLocation(e.target.value)}
