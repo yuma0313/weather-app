@@ -23,3 +23,4 @@ const InputField: React.FC<InputFieldProps> = ({
 };
 
 export default InputField;
+export type { InputFieldProps };

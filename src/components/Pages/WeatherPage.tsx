@@ -52,7 +52,7 @@ const WeatherPage: React.FC = () => {
   } else {
     content = (
       <>
-        <div className="flex md:flex-row flex-col p-12 items-center justify-between">
+        <div className="flex md:flex-row flex-col px-12 py-8 items-center justify-between">
           <Current data={data} />
           <WeekForecast data={data} />
         </div>
@@ -67,7 +67,7 @@ const WeatherPage: React.FC = () => {
     <>
       <Input handleSearch={handleSearch} setLocation={setLocation} />
       <Heading
-        level="h1"
+        level="h4"
         className="mb-8 md:mb-0 order-1 text-white py-2 px-4 rounded-xl italic font-bold"
       >
         Weather App

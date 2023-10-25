@@ -24,7 +24,7 @@ const Current = ({ data }: CurrentProps) => {
     <div className="w-80 flex flex-col mb-8 md:mb-0 items-start gap-2 bg-black/25 p-6 rounded-xl">
       <div className="flex items-center">
         <div>
-          <Heading level="h1" className="text-3xl text-white">
+          <Heading level="h3" className="text-white">
             Today
           </Heading>
           <p className="text-white">{currentDate}</p>
