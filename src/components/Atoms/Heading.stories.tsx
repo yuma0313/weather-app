@@ -1,7 +1,7 @@
 import Heading, { HeadingProps } from "./Heading";
+import { Meta, StoryObj } from "@storybook/react";
 
 export default {
-  title: "Atoms/Heading",
   component: Heading,
   argTypes: {
     level: {
@@ -13,13 +13,12 @@ export default {
     children: { control: "text" },
     className: { control: "text" },
   },
-};
+} as Meta<typeof Heading>;
 
-const Template = (args) => <Heading {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  level: "h1",
-  children: "Heading",
-  className: "text-gray-900",
+export const Default: StoryObj<HeadingProps> = {
+  args: {
+    level: "h1",
+    children: "Heading",
+    className: "text-gray-900",
+  },
 };
