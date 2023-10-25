@@ -2,14 +2,14 @@ import Heading from "../Atoms/Heading";
 
 interface WeatherDetailsProps {
   data: {
-    current: {
+    current?: {
       uv: number;
       wind_kph: number;
       humidity: number;
       vis_km: number;
       feelslike_c: number;
     };
-    forecast: {
+    forecast?: {
       forecastday: {
         astro: {
           sunrise: string;
@@ -20,6 +20,8 @@ interface WeatherDetailsProps {
 }
 
 const WeatherDetails = ({ data }: WeatherDetailsProps) => {
+  if (!data.current || !data.forecast) return <div>データが不足</div>;
+
   return (
     <>
       <div className="p-12">

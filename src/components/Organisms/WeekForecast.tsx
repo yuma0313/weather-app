@@ -1,6 +1,6 @@
 interface WeekForecastProps {
   data: {
-    forecast: {
+    forecast?: {
       forecastday: {
         date: string;
         day: {
@@ -17,6 +17,8 @@ interface WeekForecastProps {
 }
 
 const WeekForecast = ({ data }: WeekForecastProps) => {
+  if (!data.forecast) return <div>データが不足</div>;
+
   return (
     <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 p-6 w-full">
       {data.forecast.forecastday.map((day, index) => (

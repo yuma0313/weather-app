@@ -3,14 +3,14 @@ import { GoLocation } from "react-icons/go";
 import Heading from "../Atoms/Heading";
 interface CurrentProps {
   data: {
-    current: {
+    current?: {
       condition: {
         icon: string;
         text: string;
       };
       temp_c: number;
     };
-    location: {
+    location?: {
       name: string;
       country: string;
     };
@@ -18,6 +18,8 @@ interface CurrentProps {
 }
 
 const Current = ({ data }: CurrentProps) => {
+  if (!data.current || !data.location) return <div>データが不足</div>;
+
   const currentDate = getCurrentDate();
   const weatherIcon = data.current.condition.icon;
   return (
