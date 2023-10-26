@@ -24,7 +24,7 @@ const WeatherDetails = ({ data }: WeatherDetailsProps) => {
 
   return (
     <>
-      <div className="p-12">
+      <div className="px-12 py-10">
         <Heading level="h5" className="text-2xl text-gray-200">
           Details
         </Heading>

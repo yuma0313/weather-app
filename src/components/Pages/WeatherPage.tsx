@@ -52,7 +52,7 @@ const WeatherPage: React.FC = () => {
   } else {
     content = (
       <>
-        <div className="flex md:flex-row flex-col px-12 py-8 items-center justify-between">
+        <div className="flex md:flex-row flex-col px-12 py-10 items-center justify-between">
           <Current data={data} />
           <WeekForecast data={data} />
         </div>
